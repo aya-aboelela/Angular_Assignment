@@ -1,0 +1,21 @@
+
+<table class="table mt-5">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of messageFromChild">
+        <th scope="row">{{product.ID}}</th>
+        <td>{{product.Name}}</td>
+        <td>{{product.Quantity}}</td>
+        <td>{{product.Price}}</td>
+    </tr>
+    </tbody>
+  </table>
+<br>
+<app-child (childEvent)="messageFromChild=$event"></app-child>

@@ -1,0 +1,113 @@
+
+
+<!-- <h4> <img alt="item" [src]="StoreLogo"> {{StoreName}}</h4> -->
+
+<!--1) If the value of discount is: “No discount”, hide this <h3> tag. -->
+
+<!-- <h3 *ngIf="Discount=='No Discount' else hidden"></h3> -->
+
+<!-- <ng-template #hidden>
+  <h3 class="mt-5">
+    We offer an explicit discount of:  {{Discount |percent}} value
+  </h3>
+</ng-template>
+<hr> -->
+
+<!--2) Make a Dropdownlist that displays the categories  -->
+<!-- 
+<select>
+  <option *ngFor="let category of CategoryList;" value="">{{category.Name}}</option>
+</select>
+<br> -->
+
+<!--3) Make a table the display the Products list  -->
+
+<table class="table mt-5">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of ProductList">
+        <th scope="row">{{product.ID}}</th>
+        <td>{{product.Name}}</td>
+        <td>{{product.Quantity}}</td>
+        <td>{{product.Price}}</td>
+        <td><img alt="item" src={{product.Image}}></td>
+      </tr>
+    </tbody>
+  </table>
+<br>
+
+<!--4) Make an input where user enters his Name, and use two-way binding to bind it to “ClientName” property in the class. -->
+<!-- <label class="mt-3" for="name">Enter Your Name : </label>
+<input class="mb-3"  id="name" type="text" [(ngModel)]="ClientName"/> <br>
+Client Name : {{ClientName}}
+<br><hr> -->
+
+<!--5) Make a button “Buy”, that when clicked hides the table, and shows another div
+       saying “Thanks for purchasing from our Store” + ClientName Entered -->
+<!-- <ng-template #ttable>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of ProductList">
+            <th scope="row">{{product.ID}}</th>
+            <td>{{product.Name}}</td>
+            <td>{{product.Quantity}}</td>
+            <td>{{product.Price}}</td>
+            <td><img alt="item" src={{product.Image}}></td>
+          </tr>
+        </tbody>
+      </table>
+</ng-template> -->
+<!-- 
+<button class="btn btn-primary" (click)="onclick()">Buy</button>
+<br>
+
+<ng-template #name>Thanks for purchasing from our Store {{ClientName}} Entered.</ng-template>
+<div *ngIf="IsPurshased; then ttable; else name"></div>
+<br><hr><br> -->
+
+<!--2) a.	For the store name display it as upper-case using pipes -->
+
+<!-- <h3>Store Name : {{StoreName| uppercase}}</h3> <br> -->
+
+<!--2) b.	Discount will be in percent using pipes -->
+<!-- <h3>Discount : {{Discount |percent}}</h3> -->
+
+
+<!-- ---------------------Complete Lab3------------------- -->
+
+<!-- <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <th scope="row">{{product.ID}}</th>
+      <td>{{product.Name}}</td>
+      <td>{{product.Quantity}}</td>
+      <td>{{product.Price}}</td>
+    </tr>
+  </tbody>
+</table>
+{{errorMessage}} -->

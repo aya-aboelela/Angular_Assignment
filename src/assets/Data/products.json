@@ -1,0 +1,24 @@
+
+[
+    {
+    "ID":1,
+    "Name":"Apple",
+    "Quantity":100,
+    "Price":30
+  
+  },
+  {
+    "ID":2,
+    "Name":"Green Beans",
+    "Quantity":50,
+    "Price":25
+  
+  },
+  {
+    "ID":3,
+    "Name":"Carrots",
+    "Quantity":150,
+    "Price":50
+  
+  }
+  ]
